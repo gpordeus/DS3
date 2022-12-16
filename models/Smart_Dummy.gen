@@ -5,9 +5,8 @@
 0   ModelSimulation "" traceLevel=9 terminatingCondition="count(Dispose_1.CountNumberIn)>30" 
 
 # Model Data Definitions
-65  Formula    "TempoChegada" 
 
 # Model Components
-62  Create     "Create_1" entityType="entitytype" nextId=63 timeBetweenCreations="TempoChegada[1,1]" 
-63  DummyComponent "DummyComponent_1" nextId=64 
-64  Dispose    "Dispose_1" nexts=0 
+58  Create     "Create_1" entityType="entitytype" nextId=59 
+59  DummyComponent "DummyComponent_1" nextId=60 
+60  Dispose    "Dispose_1" nexts=0 

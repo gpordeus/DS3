@@ -30,7 +30,6 @@
 #include "terminal/examples/smarts/Smart_AssignWriteSeizes.h"
 #include "terminal/examples/smarts/Smart_BatchSeparate.h"
 #include "terminal/examples/smarts/Smart_Clone.h"
-#include "terminal/examples/smarts/Smart_CppForG.h"
 #include "terminal/examples/smarts/Smart_Delay.h"
 #include "terminal/examples/smarts/Smart_Dummy.h"
 #include "terminal/examples/smarts/Smart_Failures.h"

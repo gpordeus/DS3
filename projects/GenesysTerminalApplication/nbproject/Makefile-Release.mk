@@ -42,7 +42,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/296208d5/Smart_BatchSeparate.o \
 	${OBJECTDIR}/_ext/296208d5/Smart_CellularAutomata1.o \
 	${OBJECTDIR}/_ext/296208d5/Smart_Clone.o \
-	${OBJECTDIR}/_ext/296208d5/Smart_CppForG.o \
 	${OBJECTDIR}/_ext/296208d5/Smart_Delay.o \
 	${OBJECTDIR}/_ext/296208d5/Smart_Dummy.o \
 	${OBJECTDIR}/_ext/296208d5/Smart_Failures.o \
@@ -134,7 +133,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/f13e5db9/Batch.o \
 	${OBJECTDIR}/_ext/f13e5db9/CellularAutomata.o \
 	${OBJECTDIR}/_ext/f13e5db9/Clone.o \
-	${OBJECTDIR}/_ext/f13e5db9/CppForG.o \
 	${OBJECTDIR}/_ext/f13e5db9/Create.o \
 	${OBJECTDIR}/_ext/f13e5db9/Decide.o \
 	${OBJECTDIR}/_ext/f13e5db9/Delay.o \
@@ -171,7 +169,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/f13e5db9/Wait.o \
 	${OBJECTDIR}/_ext/f13e5db9/Write.o \
 	${OBJECTDIR}/_ext/ccae408d/AssignmentItem.o \
-	${OBJECTDIR}/_ext/ccae408d/CppCompiler.o \
 	${OBJECTDIR}/_ext/ccae408d/DummyElement.o \
 	${OBJECTDIR}/_ext/ccae408d/EFSM.o \
 	${OBJECTDIR}/_ext/ccae408d/EntityGroup.o \
@@ -266,11 +263,6 @@ ${OBJECTDIR}/_ext/296208d5/Smart_Clone.o: ../../source/applications/terminal/exa
 	${MKDIR} -p ${OBJECTDIR}/_ext/296208d5
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/296208d5/Smart_Clone.o ../../source/applications/terminal/examples/smarts/Smart_Clone.cpp
-
-${OBJECTDIR}/_ext/296208d5/Smart_CppForG.o: ../../source/applications/terminal/examples/smarts/Smart_CppForG.cpp nbproject/Makefile-${CND_CONF}.mk
-	${MKDIR} -p ${OBJECTDIR}/_ext/296208d5
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/296208d5/Smart_CppForG.o ../../source/applications/terminal/examples/smarts/Smart_CppForG.cpp
 
 ${OBJECTDIR}/_ext/296208d5/Smart_Delay.o: ../../source/applications/terminal/examples/smarts/Smart_Delay.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}/_ext/296208d5
@@ -727,11 +719,6 @@ ${OBJECTDIR}/_ext/f13e5db9/Clone.o: ../../source/plugins/components/Clone.cpp nb
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f13e5db9/Clone.o ../../source/plugins/components/Clone.cpp
 
-${OBJECTDIR}/_ext/f13e5db9/CppForG.o: ../../source/plugins/components/CppForG.cpp nbproject/Makefile-${CND_CONF}.mk
-	${MKDIR} -p ${OBJECTDIR}/_ext/f13e5db9
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f13e5db9/CppForG.o ../../source/plugins/components/CppForG.cpp
-
 ${OBJECTDIR}/_ext/f13e5db9/Create.o: ../../source/plugins/components/Create.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}/_ext/f13e5db9
 	${RM} "$@.d"
@@ -911,11 +898,6 @@ ${OBJECTDIR}/_ext/ccae408d/AssignmentItem.o: ../../source/plugins/data/Assignmen
 	${MKDIR} -p ${OBJECTDIR}/_ext/ccae408d
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ccae408d/AssignmentItem.o ../../source/plugins/data/AssignmentItem.cpp
-
-${OBJECTDIR}/_ext/ccae408d/CppCompiler.o: ../../source/plugins/data/CppCompiler.cpp nbproject/Makefile-${CND_CONF}.mk
-	${MKDIR} -p ${OBJECTDIR}/_ext/ccae408d
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ccae408d/CppCompiler.o ../../source/plugins/data/CppCompiler.cpp
 
 ${OBJECTDIR}/_ext/ccae408d/DummyElement.o: ../../source/plugins/data/DummyElement.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}/_ext/ccae408d
@@ -1145,19 +1127,6 @@ ${OBJECTDIR}/_ext/296208d5/Smart_Clone_nomain.o: ${OBJECTDIR}/_ext/296208d5/Smar
 	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/296208d5/Smart_Clone_nomain.o ../../source/applications/terminal/examples/smarts/Smart_Clone.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/_ext/296208d5/Smart_Clone.o ${OBJECTDIR}/_ext/296208d5/Smart_Clone_nomain.o;\
-	fi
-
-${OBJECTDIR}/_ext/296208d5/Smart_CppForG_nomain.o: ${OBJECTDIR}/_ext/296208d5/Smart_CppForG.o ../../source/applications/terminal/examples/smarts/Smart_CppForG.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/296208d5
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/296208d5/Smart_CppForG.o`; \
-	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
-	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/296208d5/Smart_CppForG_nomain.o ../../source/applications/terminal/examples/smarts/Smart_CppForG.cpp;\
-	else  \
-	    ${CP} ${OBJECTDIR}/_ext/296208d5/Smart_CppForG.o ${OBJECTDIR}/_ext/296208d5/Smart_CppForG_nomain.o;\
 	fi
 
 ${OBJECTDIR}/_ext/296208d5/Smart_Delay_nomain.o: ${OBJECTDIR}/_ext/296208d5/Smart_Delay.o ../../source/applications/terminal/examples/smarts/Smart_Delay.cpp 
@@ -2343,19 +2312,6 @@ ${OBJECTDIR}/_ext/f13e5db9/Clone_nomain.o: ${OBJECTDIR}/_ext/f13e5db9/Clone.o ..
 	    ${CP} ${OBJECTDIR}/_ext/f13e5db9/Clone.o ${OBJECTDIR}/_ext/f13e5db9/Clone_nomain.o;\
 	fi
 
-${OBJECTDIR}/_ext/f13e5db9/CppForG_nomain.o: ${OBJECTDIR}/_ext/f13e5db9/CppForG.o ../../source/plugins/components/CppForG.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/f13e5db9
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/f13e5db9/CppForG.o`; \
-	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
-	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f13e5db9/CppForG_nomain.o ../../source/plugins/components/CppForG.cpp;\
-	else  \
-	    ${CP} ${OBJECTDIR}/_ext/f13e5db9/CppForG.o ${OBJECTDIR}/_ext/f13e5db9/CppForG_nomain.o;\
-	fi
-
 ${OBJECTDIR}/_ext/f13e5db9/Create_nomain.o: ${OBJECTDIR}/_ext/f13e5db9/Create.o ../../source/plugins/components/Create.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/f13e5db9
 	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/f13e5db9/Create.o`; \
@@ -2822,19 +2778,6 @@ ${OBJECTDIR}/_ext/ccae408d/AssignmentItem_nomain.o: ${OBJECTDIR}/_ext/ccae408d/A
 	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ccae408d/AssignmentItem_nomain.o ../../source/plugins/data/AssignmentItem.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/_ext/ccae408d/AssignmentItem.o ${OBJECTDIR}/_ext/ccae408d/AssignmentItem_nomain.o;\
-	fi
-
-${OBJECTDIR}/_ext/ccae408d/CppCompiler_nomain.o: ${OBJECTDIR}/_ext/ccae408d/CppCompiler.o ../../source/plugins/data/CppCompiler.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/ccae408d
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/_ext/ccae408d/CppCompiler.o`; \
-	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
-	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ccae408d/CppCompiler_nomain.o ../../source/plugins/data/CppCompiler.cpp;\
-	else  \
-	    ${CP} ${OBJECTDIR}/_ext/ccae408d/CppCompiler.o ${OBJECTDIR}/_ext/ccae408d/CppCompiler_nomain.o;\
 	fi
 
 ${OBJECTDIR}/_ext/ccae408d/DummyElement_nomain.o: ${OBJECTDIR}/_ext/ccae408d/DummyElement.o ../../source/plugins/data/DummyElement.cpp 
