@@ -74,8 +74,6 @@
               <itemPath>../../source/applications/terminal/examples/smarts/Smart_CellularAutomata1.h</itemPath>
               <itemPath>../../source/applications/terminal/examples/smarts/Smart_Clone.cpp</itemPath>
               <itemPath>../../source/applications/terminal/examples/smarts/Smart_Clone.h</itemPath>
-              <itemPath>../../source/applications/terminal/examples/smarts/Smart_CppForG.cpp</itemPath>
-              <itemPath>../../source/applications/terminal/examples/smarts/Smart_CppForG.h</itemPath>
               <itemPath>../../source/applications/terminal/examples/smarts/Smart_Delay.cpp</itemPath>
               <itemPath>../../source/applications/terminal/examples/smarts/Smart_Delay.h</itemPath>
               <itemPath>../../source/applications/terminal/examples/smarts/Smart_Dummy.cpp</itemPath>
@@ -311,8 +309,6 @@
           <itemPath>../../source/plugins/components/CellularAutomata.h</itemPath>
           <itemPath>../../source/plugins/components/Clone.cpp</itemPath>
           <itemPath>../../source/plugins/components/Clone.h</itemPath>
-          <itemPath>../../source/plugins/components/CppForG.cpp</itemPath>
-          <itemPath>../../source/plugins/components/CppForG.h</itemPath>
           <itemPath>../../source/plugins/components/Create.cpp</itemPath>
           <itemPath>../../source/plugins/components/Create.h</itemPath>
           <itemPath>../../source/plugins/components/Decide.cpp</itemPath>
@@ -387,8 +383,6 @@
         <logicalFolder name="data" displayName="data" projectFiles="true">
           <itemPath>../../source/plugins/data/AssignmentItem.cpp</itemPath>
           <itemPath>../../source/plugins/data/AssignmentItem.h</itemPath>
-          <itemPath>../../source/plugins/data/CppCompiler.cpp</itemPath>
-          <itemPath>../../source/plugins/data/CppCompiler.h</itemPath>
           <itemPath>../../source/plugins/data/DummyElement.cpp</itemPath>
           <itemPath>../../source/plugins/data/DummyElement.h</itemPath>
           <itemPath>../../source/plugins/data/EFSM.cpp</itemPath>
@@ -463,10 +457,30 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Arquivos de Teste"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f1"
+                     displayName="Google tests"
+                     projectFiles="true"
+                     kind="TEST">
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Arquivos Importantes"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
     <itemPath>main.cpp</itemPath>
   </logicalFolder>
   <sourceFolderFilter>^(nbproject|build)$</sourceFolderFilter>
   <sourceRootList>
+    <Elem>../../source</Elem>
+    <Elem>../../documentation</Elem>
+    <Elem>../../models</Elem>
+    <Elem>..</Elem>
     <Elem>../../source</Elem>
     <Elem>../../documentation</Elem>
     <Elem>../../models</Elem>
@@ -664,16 +678,6 @@
             flavor2="0">
       </item>
       <item path="../../source/applications/terminal/examples/smarts/Smart_Clone.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../source/applications/terminal/examples/smarts/Smart_CppForG.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../source/applications/terminal/examples/smarts/Smart_CppForG.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -1673,16 +1677,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="../../source/plugins/components/CppForG.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../source/plugins/components/CppForG.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="../../source/plugins/components/Create.cpp"
             ex="false"
             tool="1"
@@ -2039,16 +2033,6 @@
             flavor2="0">
       </item>
       <item path="../../source/plugins/data/AssignmentItem.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../source/plugins/data/CppCompiler.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../source/plugins/data/CppCompiler.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -2479,16 +2463,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="../../source/applications/terminal/examples/smarts/Smart_CppForG.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../source/applications/terminal/examples/smarts/Smart_CppForG.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="../../source/applications/terminal/examples/smarts/Smart_Delay.cpp"
             ex="false"
             tool="1"
@@ -3484,16 +3458,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="../../source/plugins/components/CppForG.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../source/plugins/components/CppForG.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="../../source/plugins/components/Create.cpp"
             ex="false"
             tool="1"
@@ -3850,16 +3814,6 @@
             flavor2="0">
       </item>
       <item path="../../source/plugins/data/AssignmentItem.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../source/plugins/data/CppCompiler.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="../../source/plugins/data/CppCompiler.h"
             ex="false"
             tool="3"
             flavor2="0">

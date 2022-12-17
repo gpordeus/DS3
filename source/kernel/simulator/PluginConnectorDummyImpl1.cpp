@@ -19,7 +19,6 @@
 #include "../../plugins/components/Assign.h"
 #include "../../plugins/components/Batch.h"
 #include "../../plugins/components/Clone.h"
-#include "../../plugins/components/CppForG.h"
 #include "../../plugins/components/Create.h"
 #include "../../plugins/components/Decide.h"
 #include "../../plugins/components/Delay.h"
@@ -55,7 +54,6 @@
 
 
 // Model data definitions
-#include "../../plugins/data/CppCompiler.h"
 #include "../../plugins/data/EntityGroup.h"
 #include "../../plugins/data/Failure.h"
 #include "../../plugins/data/File.h"
@@ -176,8 +174,6 @@ Plugin* PluginConnectorDummyImpl1::connect(const std::string dynamicLibraryFilen
 		GetInfo = &SignalData::GetPluginInformation;
 	else if (fn == "store.so")
 		GetInfo = &Store::GetPluginInformation;
-	else if (fn == "cppforg.so")
-		GetInfo = &CppForG::GetPluginInformation;
 	else if (fn == "unstore.so")
 		GetInfo = &Unstore::GetPluginInformation;
 	else if (fn == "formula.so")
@@ -200,8 +196,6 @@ Plugin* PluginConnectorDummyImpl1::connect(const std::string dynamicLibraryFilen
 		GetInfo = &Start::GetPluginInformation;
 	else if (fn == "stop.so")
 		GetInfo = &Stop::GetPluginInformation;
-	else if (fn == "cppcompiler.so")
-		GetInfo = &CppCompiler::GetPluginInformation;
 	else if (fn == "efsm.so")
 		GetInfo = &FiniteStateMachine::GetPluginInformation;
 	else if (fn == "efsmData.so")

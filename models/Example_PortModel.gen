@@ -1,0 +1,51 @@
+# Genesys Simulation Model
+# Simulator, Model and Simulation infos
+0   Simulator  "GenESyS - GENeric and Expansible SYstem Simulator" versionNumber=220517 
+0   ModelInfo  "Model 1" version="1.0" projectTitle="" description="" analystName="" 
+0   ModelSimulation "" traceLevel=2 warmUpTimeTimeUnit=7 warmUpTime=0.600000 replicationLength=12.000000 numberOfReplications=10 replicationLengthTimeUnit=7 
+
+# Model Data Definitions
+58  Resource   "rBuffer" 
+59  Resource   "rPier1" 
+60  Resource   "rPier2" 
+61  Queue      "Seize_Buffer_Resource.Queue" 
+62  Variable   "vPier1Busy" 
+63  Variable   "vPier2Busy" 
+65  EntityType "Ship" 
+66  Station    "Arrival_Station" 
+69  Station    "Station_Pier_Align" 
+74  Station    "Station_Pier_1_Align" 
+80  Station    "Station_Pier_2_Align" 
+85  Station    "Station_Pier_1" 
+91  Queue      "Queue_1" 
+94  Station    "Station_Pier_2" 
+100 Queue      "Queue_2" 
+103 Station    "Departure_Station" 
+
+# Model Components
+64  Create     "Create_1" entityType="Ship" nextId=67 timeBetweenCreations="expo(40)" 
+67  Enter      "Enter_Arrival" station="Arrival_Station" nextId=68 
+68  Route      "Route_to_Pier_Align" station="Station_Pier_Align" routeTimeExpression="15" nexts=0 
+70  Enter      "Enter_Pier_Align" station="Station_Pier_Align" nextId=71 
+71  Seize      "Seize_Buffer_Resource" queueable="Seize_Buffer_Resource.Queue" nextId=72 requestSeizable[0]="rBuffer" 
+72  Decide     "Try_Pier_1" condition[0]="vPier1Busy == 0" conditions=1 nextId[0]=73 nextId[1]=78 nexts=2 
+73  Release    "Release_3" nextId=75 requestSeizable[0]="rBuffer" 
+75  Enter      "Enter_Pier_1_Align" station="Station_Pier_1_Align" nextId=76 
+76  Assign     "Set_Pier_1_Busy_Flag" assignIsAttrib[0]=0 assignExpr[0]="1" nextId=77 assignDest[0]="vPier1Busy" 
+77  Route      "Route_Pier_1" station="Station_Pier_1" routeTimeExpression="5" nexts=0 
+78  Decide     "Try_Pier_2" condition[0]="vPier2Busy == 0" conditions=1 nextId[0]=79 nextId[1]=84 nexts=2 
+79  Release    "Release_4" nextId=81 requestSeizable[0]="rBuffer" 
+81  Enter      "Enter_Pier_2_Align" station="Station_Pier_2_Align" nextId=82 
+82  Assign     "Set_Pier_2_Busy_Flag" assignIsAttrib[0]=0 assignExpr[0]="1" nextId=83 assignDest[0]="vPier2Busy" 
+83  Route      "Route_Pier_2" station="Station_Pier_2" routeTimeExpression="10" nexts=0 
+84  Delay      "Delay_2" delayExpression="5" nextId=72 
+86  Enter      "Enter_Pier_1" station="Station_Pier_1" nextId=87 
+87  Process    "Pier_1_Loading_Operation" delayExpression="tria(35, 40, 60)" queueable="Queue_1" allocationType=1 nextId=92 requestSeizable[0]="rPier1" 
+92  Assign     "Reset_Pier_1_Busy_Flag" assignIsAttrib[0]=0 assignExpr[0]="0" nextId=93 assignDest[0]="vPier1Busy" 
+93  Route      "Route_to_Departure" station="Departure_Station" routeTimeExpression="15" nexts=0 
+95  Enter      "Enter_Pier2" station="Station_Pier_2" nextId=96 
+96  Process    "Pier_2_Loading_Operation" delayExpression="tria(35, 40, 60)" queueable="Queue_2" allocationType=1 nextId=101 requestSeizable[0]="rPier2" 
+101 Assign     "Reset_Pier_2_Busy_Flag" assignIsAttrib[0]=0 assignExpr[0]="0" nextId=102 assignDest[0]="vPier2Busy" 
+102 Route      "Route_to_Departure_2" station="Departure_Station" routeTimeExpression="10" nexts=0 
+104 Enter      "Enter_Departure" station="Departure_Station" nextId=105 
+105 Dispose    "Dispose_2" nexts=0 

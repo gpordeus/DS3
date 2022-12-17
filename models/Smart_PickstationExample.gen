@@ -1,0 +1,14 @@
+# Genesys Simulation Model
+# Simulator, Model and Simulation infos
+0   Simulator  "GenESyS - GENeric and Expansible SYstem Simulator" versionNumber=220517 
+0   ModelInfo  "Model 1" version="1.0" projectTitle="" description="" analystName="" 
+0   ModelSimulation "" traceLevel=9 replicationLength=1.000000 replicationLengthTimeUnit=6 
+
+# Model Data Definitions
+59  Station    "Station_Entry" 
+
+# Model Components
+58  Create     "Create_1" entityType="entitytype" timeBetweenCreationsTimeUnit=6 nextId=60 timeBetweenCreations="expo(1)" 
+60  Enter      "Enter_Entry" station="Station_Entry" nextId=61 
+61  PickStation "PickStation_1" nextId[0]=62 nextId[1]=62 nexts=2 reportStatistics=0 
+62  Dispose    "Dispose_1" nexts=0 
