@@ -93,14 +93,14 @@ void Clone::_onDispatchEvent(Entity* entity, unsigned int inputPortNumber) {
 bool Clone::_loadInstance(PersistenceRecord *fields) {
 	bool res = ModelComponent::_loadInstance(fields);
 	if (res) {
-		// @TODO: not implemented yet
+            _numClonesExpression = fields->loadField("NumClonesExpression", DEFAULT.numClonesExpression);
 	}
 	return res;
 }
 
 void Clone::_saveInstance(PersistenceRecord *fields, bool saveDefaultValues) {
 	ModelComponent::_saveInstance(fields, saveDefaultValues);
-	// @TODO: not implemented yet
+	fields->saveField("NumClonesExpression", _numClonesExpression, DEFAULT.numClonesExpression, saveDefaultValues);
 }
 
 

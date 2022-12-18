@@ -40,7 +40,16 @@
             <file>file:/home/rlcancian/Laboratory/Software_Lab/IA32_Architecture/GccProjects/RebornedGenESyS/Genesys-Simulator/projects/GenesysTerminalApplication/main.cpp</file>
         </group>
         <group>
-            <file>file:/home/gabriel/Documents/ds3/ds3/source/applications/terminal/examples/smarts/Example_PortModel.cpp</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/Delay.h</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/Leave.cpp</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/Leave.h</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/Assign.cpp</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/Decide.cpp</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/DummyComponent.cpp</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/Clone.cpp</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/Delay.cpp</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/Batch.cpp</file>
+            <file>file:/home/gabriel/Documents/ds3/ds3/source/plugins/components/DummyComponent.h</file>
         </group>
     </open-files>
 </project-private>
